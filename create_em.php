@@ -10,7 +10,7 @@ $sql = "INSERT INTO tbl_employee (name_empl,lastname_empl,address_empl,numphone_
 
 if ($conn->query($sql)) {
 echo "New record created successfully";
-header('location: index_em.php'); //กลับไปยังหน้าตาราง
+header('location:index_em.php'); //กลับไปยังหน้าตาราง
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }

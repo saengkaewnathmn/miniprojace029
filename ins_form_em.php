@@ -18,19 +18,19 @@
 <div class="mb-3">
 <form  action="create_em.php" method="post">
             <div class="mb-3">
-                <label for="name_empl" class="form-label">name</label>
+                <label for="name_empl" class="form-label">ชื่อ</label>
                 <input type="text" class="form-control" name="name_empl" required>
             </div>
             <div class="mb-3">
-                <label for="lastname_empl" class="form-label">lastname</label>
+                <label for="lastname_empl" class="form-label">นามสกุล</label>
                 <input type="text" class="form-control" name="lastname_empl" required>
             </div>
             <div class="mb-3">
-                <label for="address_empl">address</label>
+                <label for="address_empl">ที่อยู่</label>
                 <input type="S_Address" class="form-control" name="address_empl" required>
             </div>
             <div class="mb-3">
-                <label for="numphone_empl">numphone</label>
+                <label for="numphone_empl">เบอร์โทร</label>
                 <input type="text" class="form-control" name="numphone_empl" required>
             </div>
             <button type="submit">Create</button>

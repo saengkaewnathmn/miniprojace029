@@ -20,30 +20,25 @@
         <thead>
 
 <tr>
-<th>รหัสพนักงาน</th>
-<th>ชื่อ</th>
-<th>นามสกุล</th>
-<th>ที่อยู่</th>
-<th>เบอร์โทรศัพท์</th>                                                                                                                                                                                                                  
+<th>รหัสประเภทสินค้า</th>
+<th>ชื่อประเภทสินค้า</th>
 <th>Action</th>
+
 </tr>
 </thead>
 <tbody>
 <?php 
 include('connection.php');
-$sql = "SELECT * FROM tbl_employee";
+$sql = "SELECT * FROM tbl_producttype";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 //แสดงข้อมูลเป็นตาราง
 while($row = $result->fetch_assoc()) {
 echo '<tr>';
-echo '<td>'. $row['id_empl'] . '</td>';
-echo '<td>'. $row['name_empl'] . '</td>';
-echo '<td>'. $row['lastname_empl'] . '</td>';
-echo '<td>'. $row['address_empl'] . '</td>';
-echo '<td>'. $row['numphone_empl'] . '</td>';
-echo '<td><a role="button"  href="update_em.php?id_empl='.$row['id_empl'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
-echo '<a href="delete_em.php?id_empl='.$row['id_empl'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
+echo '<td>'. $row['id_type'] . '</td>';
+echo '<td>'. $row['name_type'] . '</td>';
+echo '<td><a role="button"  href="update_pty.php?id_type='.$row['id_type'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
+echo '<a href="delete_pty.php?id_type='.$row['id_type'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
 echo '</tr>';
 }
 } else {

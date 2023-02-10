@@ -23,19 +23,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-3">แก้ไขข้อมูล</h1>
+        <h1 class="mt-3">แก้ไขข้อมูลพนักงาน</h1>
         <hr>
-        <form action="upd_save.php?c_no=<?=$_GET["c_no"];?>" enctype="multipart/form-data" method="POST">
-            <label for="S_Name" class="form-label">First Name</label>
-            <input class="form-control" type="text" name="S_Name" value="<?php echo $row['S_Name']; ?>">
-            <label for="S_LastName" class="form-label">Last Name</label>
-            <input class="form-control" type="text"  name="S_LastName" value="<?php echo $row['S_LastName']; ?>">
-            <label for="S_Address" class="form-label">Address</label>
-            <input class="form-control" type="text" name="S_Address" value="<?php echo $row['S_Address']; ?>">
-            <label for="S_SunjectName" class="form-label">Subject Name</label>
-            <input class="form-control" type="text" name="S_SunjectName" value="<?php echo $row['S_SunjectName']; ?>">
+        <form action="upd_save_em.php?id_empl=<?=$_GET["id_empl"];?>" enctype="multipart/form-data" method="POST">
+            <label for="name_empl" class="form-label">ชื่อ</label>
+            <input class="form-control" type="text" name="name_empl" value="<?php echo $row['name_empl']; ?>">
+            <label for="lastname_empl" class="form-label">นามสกุล</label>
+            <input class="form-control" type="text"  name="lastname_empl" value="<?php echo $row['lastname_empl']; ?>">
+            <label for="address_empl" class="form-label">ที่อยู่</label>
+            <input class="form-control" type="text" name="address_empl" value="<?php echo $row['address_empl']; ?>">
+            <label for="numphone_empl" class="form-label">เบอร์โทร</label>
+            <input class="form-control" type="text" name="numphone_empl" value="<?php echo $row['numphone_empl']; ?>">
             <input class="btn btn-success mt-3" type="submit" value="Update">
-            <a href="index.php" class="btn btn-primary mt-3">Go Back</a>
+            <a href="index_em.php" class="btn btn-primary mt-3">Go Back</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

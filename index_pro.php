@@ -18,32 +18,30 @@
                 <a href="logout.php" class="btn btn-success">ออกจากระบบ</a>
 <table id="mytable" class="table table-bordered table-striped">
         <thead>
-
+        
 <tr>
-<th>รหัสพนักงาน</th>
-<th>ชื่อ</th>
-<th>นามสกุล</th>
-<th>ที่อยู่</th>
-<th>เบอร์โทรศัพท์</th>                                                                                                                                                                                                                  
+<th>รหัสสินค้า</th>
+<th>ชื่อสินค้า</th>
+<th>ขนาด</th>
+<th>ราคา</th>                                                                                                                                                                                                              
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <?php 
 include('connection.php');
-$sql = "SELECT * FROM tbl_employee";
+$sql = "SELECT * FROM tbl_product";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 //แสดงข้อมูลเป็นตาราง
 while($row = $result->fetch_assoc()) {
 echo '<tr>';
-echo '<td>'. $row['id_empl'] . '</td>';
-echo '<td>'. $row['name_empl'] . '</td>';
-echo '<td>'. $row['lastname_empl'] . '</td>';
-echo '<td>'. $row['address_empl'] . '</td>';
-echo '<td>'. $row['numphone_empl'] . '</td>';
-echo '<td><a role="button"  href="update_em.php?id_empl='.$row['id_empl'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
-echo '<a href="delete_em.php?id_empl='.$row['id_empl'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
+echo '<td>'. $row['id_pro'] . '</td>';
+echo '<td>'. $row['name_pro'] . '</td>';
+echo '<td>'. $row['quantity_pro'] . '</td>';
+echo '<td>'. $row['price_pro'] . '</td>';
+echo '<td><a role="button"  href="update_pro.php?id_pro='.$row['id_pro'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
+echo '<a href="delete_pro.php?id_pro='.$row['id_pro'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
 echo '</tr>';
 }
 } else {

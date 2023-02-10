@@ -21,20 +21,20 @@ Header("Location:logout.php");
 
 <div class="container mt-3">
                 <a href="ins_form.php" class="btn btn-success">ข้อมูลลูกค้า</a>
-				<a href="ins_form.php" class="btn btn-success">ข้อมูลสินค้า</a>
-				<a href="ins_form.php" class="btn btn-success">ข้อมูลประเภทสินค้า</a>
-				<a href="ins_form.php" class="btn btn-success">ข้อมูลการขาย</a>
-                <a href="index_em.php" class="btn btn-success">ข้อมูลพนักงาน</a>
+				<a href="ins_form_pro.php" class="btn btn-success">ข้อมูลสินค้า</a>
+				<a href="ins_form_pty.php" class="btn btn-success">ข้อมูลประเภทสินค้า</a>
+				<a href="ins_form_sale.php" class="btn btn-success">ข้อมูลการขาย</a>
+                <a href="ins_form_em.php" class="btn btn-success">ข้อมูลพนักงาน</a>
                 <a href="logout.php" class="btn btn-success">ออกจากระบบ</a>
 <table id="mytable" class="table table-bordered table-striped">
         <thead>
-        <button type="button" class="btn btn-warning">เพิ่มข้อมูล</button>  
+            
 <tr>
-<th>no</th>
-<th>Name</th>
-<th>LastName</th>
-<th>Address</th>
-<th>SunjectName</th>
+<th>รหัสลูกค้า</th>
+<th>ชื่อ</th>
+<th>นามสกุล</th>
+<th>ที่อยู่</th>
+<th>ชื่อเล่น</th>
 <th>Action</th>
 </tr>
 </thead>

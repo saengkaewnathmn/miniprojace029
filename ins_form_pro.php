@@ -10,31 +10,27 @@
 <body>
     
     <div class="container">
-        <a href="index.php" class="btn btn-primary mt-3">Go Back</a>
+        <a href="index_pro.php" class="btn btn-primary mt-3">Go Back</a>
         <hr>
-        <h1 class="mt-5">เพิ่มข้อมูลลูกค้า</h1>
+        <h1 class="mt-5">เพิ่มข้อมูลสินค้า</h1>
         <hr>
         
 <div class="mb-3">
-<form  action="create.php" method="post">
+<form  action="create_pro.php" method="post">
             <div class="mb-3">
-                <label for="S_Name" class="form-label">ชื่อ</label>
-                <input type="text" class="form-control" name="S_Name" required>
+                <label for="name_pro" class="form-label">ชื่อสินค้า</label>
+                <input type="text" class="form-control" name="name_pro" required>
             </div>
             <div class="mb-3">
-                <label for="S_LastName" class="form-label">นามสกุล</label>
-                <input type="text" class="form-control" name="S_LastName" required>
+                <label for="quantity_pro">ขนาด</label>
+                <input type="quantity_pro" class="form-control" name="quantity_pro" required>
             </div>
             <div class="mb-3">
-                <label for="S_Address">ที่อยู่</label>
-                <input type="S_Address" class="form-control" name="S_Address" required>
-            </div>
-            <div class="mb-3">
-                <label for="S_SunjectName">ชื่อเล่น</label>
-                <input type="text" class="form-control" name="S_SunjectName" required>
+                <label for="price_pro">ราคา</label>
+                <input type="text" class="form-control" name="price_pro" required>
             </div>
             <button type="submit">Create</button>
-            <a class="btn" href="index.php">Back</a>
+            <a class="btn" href="index_pro.php">Back</a>
             </form>
             </div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

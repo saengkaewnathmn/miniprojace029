@@ -20,30 +20,30 @@
         <thead>
 
 <tr>
-<th>รหัสพนักงาน</th>
-<th>ชื่อ</th>
-<th>นามสกุล</th>
-<th>ที่อยู่</th>
-<th>เบอร์โทรศัพท์</th>                                                                                                                                                                                                                  
+<th>รหัส</th>
+<th>ชื่อลูกค้า</th>
+<th>ชื่อพนักงาน</th>
+<th>วันที่</th>
+<th>ราคารวม</th>                                                                                                                                                                                                                  
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <?php 
 include('connection.php');
-$sql = "SELECT * FROM tbl_employee";
+$sql = "SELECT * FROM tbl_sales";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 //แสดงข้อมูลเป็นตาราง
 while($row = $result->fetch_assoc()) {
 echo '<tr>';
-echo '<td>'. $row['id_empl'] . '</td>';
-echo '<td>'. $row['name_empl'] . '</td>';
-echo '<td>'. $row['lastname_empl'] . '</td>';
-echo '<td>'. $row['address_empl'] . '</td>';
-echo '<td>'. $row['numphone_empl'] . '</td>';
-echo '<td><a role="button"  href="update_em.php?id_empl='.$row['id_empl'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
-echo '<a href="delete_em.php?id_empl='.$row['id_empl'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
+echo '<td>'. $row['id_sales'] . '</td>';
+echo '<td>'. $row['name_cos'] . '</td>';
+echo '<td>'. $row['name_emp'] . '</td>';
+echo '<td>'. $row['date_sale'] . '</td>';
+echo '<td>'. $row['sellingprice_sale'] . '</td>';
+echo '<td><a role="button"  href="update_sale.php?id_sales='.$row['id_sales'].'" class="btn btn-success">Update</a> ';  //ปุ่มที่เพิ่มเข้ามา
+echo '<a href="delete_sale.php?id_sales='.$row['id_sales'].'" class="btn btn-danger">delete</a>';  //ปุ่มที่เพิ่มเข้ามา
 echo '</tr>';
 }
 } else {
